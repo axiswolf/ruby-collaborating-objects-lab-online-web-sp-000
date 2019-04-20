@@ -24,8 +24,7 @@ class Song
       #associates new song instance with the artist from the filenames
       artist_name = file_name.split(" - ")[0]
       song_name = file_name.split(" - ")[1]
-
-      song.artist_name = arist_name
+      #song.artist_name = arist_name
       song = Song.new(song_name)
 
   end
