@@ -19,16 +19,8 @@ class Song
       self.artist.name = name
     end
   end
-  def self.new_by_filename(song_name)
+  def self.new_by_filename(file_name)
       #creates new instance of a song from the file that's passed
       #associates new song instance with the artist from the filenames
-      new_song = self.all.find {|song| song.name == song_name}
-      if new_song
-         new_song
-       else
-         new_song =  Song.new(song_name)
-         new_song.save
-         new_song
-       end
   end
 end
