@@ -13,14 +13,11 @@ class Song
     @artist = song_artist
   end
   def artist_name=(name) # this method collaborates the Artist
-    #if (self.artist.nil?)
-    #  self.artist = Artist.new(name)
-    #else
-    #  self.artist.name = name
-    #end
-    artist = Arist.find_or_create_by_name(name)
-    self.artist = artist
-    artist.add_song(self)
+    if (self.artist.nil?)
+      self.artist = Artist.new(name)
+    else
+      self.artist.name = name
+    end
   end
   def self.new_by_filename(file_name)
       #creates new instance of a song from the file that's passed
