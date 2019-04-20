@@ -5,10 +5,6 @@ class Song
     @name = name
   end
 
-  def artist=(song_artist) # setter
-    # sets the artist object to belong to the song
-    @artist = song_artist
-  end
   def artist_name=(name) # this method collaborates the Artist
     if (self.artist.nil?)
       self.artist = Artist.new(name)
