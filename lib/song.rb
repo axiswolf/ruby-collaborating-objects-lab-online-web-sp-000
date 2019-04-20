@@ -4,10 +4,7 @@ class Song
     #initialize with #name accepts a name for the Song
     @name = name
   end
-  def name=(song_name) # setter
-    # sets the song name
-    @name = song_name
-  end
+
   def artist=(song_artist) # setter
     # sets the artist object to belong to the song
     @artist = song_artist
