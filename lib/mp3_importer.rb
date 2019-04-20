@@ -8,9 +8,11 @@ class MP3Importer
   def files
     #files load all the mp3 files in the path directory
     #files normalizes the filename to just the mp3 file name with no path
+    Dir[@path+"/*.mp3"].map { |file| file.split("/").last }
   end
   def import(list_of_filenames)
   #imports the files into the library by creating songs from a filename
-    list_of_filenames.each{ |filename| Song.new_by_filename(filename) }
+    #list_of_filenames.each{ |filename| Song.new_by_filename(filename) }
+    files.each { |file| Song.new_by_filename(file) }
   end
 end
