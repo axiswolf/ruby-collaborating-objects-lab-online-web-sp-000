@@ -22,6 +22,6 @@ class Song
       song = Song.new(song_name)
       song.artist_name = artist
       song
-      song.artist_name = artist
+
   end
 end
