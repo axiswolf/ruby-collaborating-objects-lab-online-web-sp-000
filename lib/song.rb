@@ -22,8 +22,8 @@ class Song
   def self.new_by_filename(file_name)
       #creates new instance of a song from the file that's passed
       #associates new song instance with the artist from the filenames
-      artist_name = file_name.split[0]
-      song_name = file_name.split[1]
-      song_name = Song.new
+      artist_name = file_name.split(" - ")[0]
+      song_name = file_name.split(" - ")[1]
+      song = Song.new(song_name)
   end
 end
